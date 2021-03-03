@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "844233219661",
+    "project_id": "billsorting",
+    "storage_bucket": "billsorting.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844233219661:android:c7a00d9363c7c9c88c4604",
+        "android_client_info": {
+          "package_name": "com.example.billsorting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844233219661-22tjdu9m6e5975bv10i04400db826a1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLFHh-wqfkOY5JTswPwnHTFubrAIj0GsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844233219661-22tjdu9m6e5975bv10i04400db826a1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
