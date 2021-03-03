@@ -1,5 +1,6 @@
 package com.example.billsorting
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -23,6 +24,8 @@ class AddCategory : AppCompatActivity() {
         val currentDate = sdf.format(Date())
         val root = FirebaseDatabase.getInstance().getReference("root")
         root.child("categories").child(newCategory.toString()).setValue(currentDate)
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
         finish()
     }
 }
