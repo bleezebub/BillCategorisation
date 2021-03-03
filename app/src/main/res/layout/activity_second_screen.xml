@@ -70,14 +70,23 @@
         android:textSize="30sp"
         android:layout_marginTop="20sp"/>
     <Button
-        android:id="@+id/add_new_category"
+        android:id="@+id/add_new_company"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20sp"
-        android:text="Add Category or Number"
+        android:text="Add Company"
+        android:onClick="addCompany"
         />
 
+    <Button
+        android:id="@+id/add_new_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:text="Add Number"
+        />
     <Button
         android:id="@+id/final_page"
         android:layout_width="wrap_content"

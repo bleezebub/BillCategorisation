@@ -1,5 +1,6 @@
 package com.example.billsorting
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,6 +14,12 @@ class SecondScreen : AppCompatActivity() {
         setContentView(R.layout.activity_second_screen)
         category = intent.getStringExtra("category").toString()
         findViewById<TextView>(R.id.title).text = category
+    }
+
+    fun addCompany(view: View) {
+        val intent = Intent(this, AddCompany::class.java)
+        startActivity(intent)
+        finish()
     }
 
 }
