@@ -86,6 +86,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20sp"
         android:text="Add Number"
+        android:onClick="addNewNumber"
         />
     <Button
         android:id="@+id/final_page"

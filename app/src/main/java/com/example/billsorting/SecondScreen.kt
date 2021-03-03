@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 
 class SecondScreen : AppCompatActivity() {
     lateinit var category:String
@@ -18,6 +19,12 @@ class SecondScreen : AppCompatActivity() {
 
     fun addCompany(view: View) {
         val intent = Intent(this, AddCompany::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    fun addNewNumber(view: View) {
+        val intent = Intent(this, AddNumber::class.java)
         startActivity(intent)
         finish()
     }
