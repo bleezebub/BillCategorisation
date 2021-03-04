@@ -7,6 +7,15 @@
     tools:context=".ThirdScreen">
 
 
+    <Spinner
+        style="@style/spinner_style"
+        android:id="@+id/final_page_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="17dp" />
+
     <Button
         android:id="@+id/add_new_bill_galary"
         android:layout_width="wrap_content"
@@ -34,12 +43,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="306dp"
-        android:layout_height="253dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="409dp"
+        android:layout_height="428dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/add_new_bill_galary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
