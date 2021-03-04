@@ -75,7 +75,6 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener {
         val intent = Intent(this, SecondScreen::class.java)
         intent.putExtra("category", selectedCategory)
         startActivity(intent)
-        finish()
     }
 
 }

@@ -103,4 +103,13 @@ class SecondScreen : AppCompatActivity() {
         finish()
     }
 
+    fun goNext(view: View) {
+        val intent = Intent(this, ThirdScreen::class.java)
+        intent.putExtra("category", category)
+        intent.putExtra("company", findViewById<Spinner>(R.id.company_name).selectedItem.toString())
+        intent.putExtra("number", findViewById<Spinner>(R.id.mobile_number).selectedItem.toString())
+        intent.putExtra("rating", findViewById<Spinner>(R.id.rating).selectedItem.toString())
+        startActivity(intent)
+    }
+
 }
