@@ -18,7 +18,6 @@ import com.google.firebase.database.ValueEventListener
 
 class MainActivity : AppCompatActivity(), OnItemSelectedListener {
 
-    //This if for Categories
     var arrayList: ArrayList<String> = ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +41,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener {
                             for (s in map.keys) {
                                 arrayList.add(s!!)
                             }
+                            arrayList.sort()
                             adapter.notifyDataSetChanged()
                         }
                     }
