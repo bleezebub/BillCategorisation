@@ -4,11 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.AdapterView
+import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -52,8 +49,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener {
                 })
 
 
-
-
+        findViewById<Button>(R.id.next_categorisation).isEnabled =false
     }
 
     fun addCategory(view: View) {
@@ -64,6 +60,7 @@ class MainActivity : AppCompatActivity(), OnItemSelectedListener {
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 //        category = parent?.getItemAtPosition(position).
+        findViewById<Button>(R.id.next_categorisation).isEnabled =true
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {

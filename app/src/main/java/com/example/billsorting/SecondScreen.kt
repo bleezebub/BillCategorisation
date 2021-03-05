@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -16,7 +14,6 @@ class SecondScreen : AppCompatActivity() {
     lateinit var category:String
     var companyList: ArrayList<String> = ArrayList<String>()
     var numberList: ArrayList<String> = ArrayList<String>()
-    var ratingList: ArrayList<String> = ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_screen)
@@ -89,6 +86,7 @@ class SecondScreen : AppCompatActivity() {
             // Apply the adapter to the spinner
             ratingSpinner.adapter = adapter
         }
+
     }
 
     fun addCompany(view: View) {
@@ -104,12 +102,17 @@ class SecondScreen : AppCompatActivity() {
     }
 
     fun goNext(view: View) {
-        val intent = Intent(this, ThirdScreen::class.java)
-        intent.putExtra("category", category)
-        intent.putExtra("company", findViewById<Spinner>(R.id.company_name).selectedItem.toString())
-        intent.putExtra("number", findViewById<Spinner>(R.id.mobile_number).selectedItem.toString())
-        intent.putExtra("rating", findViewById<Spinner>(R.id.rating).selectedItem.toString())
-        startActivity(intent)
+        if(findViewById<Spinner>(R.id.company_name).count == 0 || findViewById<Spinner>(R.id.mobile_number).count == 0){
+            Toast.makeText(this, "Either Company or Number is not added", Toast.LENGTH_SHORT).show()
+        }else{
+            val intent = Intent(this, ThirdScreen::class.java)
+            intent.putExtra("category", category)
+            intent.putExtra("company", findViewById<Spinner>(R.id.company_name).selectedItem.toString())
+            intent.putExtra("number", findViewById<Spinner>(R.id.mobile_number).selectedItem.toString())
+            intent.putExtra("rating", findViewById<Spinner>(R.id.rating).selectedItem.toString())
+            startActivity(intent)
+        }
     }
+
 
 }
