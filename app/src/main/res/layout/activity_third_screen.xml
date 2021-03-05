@@ -8,8 +8,8 @@
 
 
     <Spinner
-        style="@style/spinner_style"
         android:id="@+id/final_page_spinner"
+        style="@style/spinner_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
@@ -27,19 +27,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.831" />
-
-    <Button
-        android:id="@+id/add_new_bill_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="addNewBillCamera"
-        android:text="Add New Bill Using Camera"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/add_new_bill_galary"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/add_new_bill_galary"
-        app:layout_constraintTop_toBottomOf="@+id/add_new_bill_galary"
-        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"
